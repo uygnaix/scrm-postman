@@ -1,0 +1,999 @@
+{
+	"info": {
+		"_postman_id": "27b759a4-7d56-4087-9ebb-7dc7b61b2b5f",
+		"name": "2020必火平台",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hack",
+			"item": [
+				{
+					"name": "hack-加入好友裂变活动",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							},
+							{
+								"key": "Blade-Auth",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0ZW5hbnRfaWQiOiI3MDYxODkiLCJyb2xlX25hbWUiOiJzY3JtX2NvcnBfYWRtaW4iLCJ1c2VyX2lkIjoiMTM5OTU0NjkzNTMyNjMxODU5MyIsInJvbGVfaWQiOiIxMzkzNTAyODcyOTkwODI2NDk4IiwidXNlcl9uYW1lIjoiMTMwODA1MTE3MjQiLCJkZXRhaWwiOnsidHlwZSI6IndlYiJ9LCJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIiwiYWNjb3VudCI6IjEzMDgwNTExNzI0IiwiY2xpZW50X2lkIjoic2FiZXIiLCJleHAiOjE2MjY4MzUyMDksIm5iZiI6MTYyNjgzMTYwOX0.nmWG4qeQe0AxT6jyAcc4A4v5qYs0I8zP-BZYJDCW9wAzUx40IRGZ6gwWnIGKgbpjmZUfIslAyHU0ZkJzIGYJog",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/blade-hack/joinHyGame?externalUserIds=wmQDSrDgAA4gRB9tWZp8JbOZ288k25Xg&userId=ChengZhi-TianTian&gameTaskId=1416938395871006721&corpId=ww03bca02e077c30dc&channelId=1416964126315433985",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-hack",
+								"joinHyGame"
+							],
+							"query": [
+								{
+									"key": "externalUserIds",
+									"value": "wmQDSrDgAA4gRB9tWZp8JbOZ288k25Xg",
+									"description": "客户联系id"
+								},
+								{
+									"key": "userId",
+									"value": "ChengZhi-TianTian",
+									"description": "成员id"
+								},
+								{
+									"key": "gameTaskId",
+									"value": "1416938395871006721",
+									"description": "活动id"
+								},
+								{
+									"key": "corpId",
+									"value": "ww03bca02e077c30dc",
+									"description": "企业id"
+								},
+								{
+									"key": "channelId",
+									"value": "1416964126315433985"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "会话存档",
+			"item": [
+				{
+					"name": "会话存档-立即同步单个企业消息",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{perm}}/blade-scrm/open/msgaudit/syncMsgAudit?corpId=ww03bca02e077c30dc",
+							"host": [
+								"{{perm}}"
+							],
+							"path": [
+								"blade-scrm",
+								"open",
+								"msgaudit",
+								"syncMsgAudit"
+							],
+							"query": [
+								{
+									"key": "corpId",
+									"value": "ww03bca02e077c30dc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "会话存档-立即同步单个企业开通成员",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/blade-scrm/open/msgaudit/syncMsgAuditPermitUser?corpId=ww03bca02e077c30dc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-scrm",
+								"open",
+								"msgaudit",
+								"syncMsgAuditPermitUser"
+							],
+							"query": [
+								{
+									"key": "corpId",
+									"value": "ww03bca02e077c30dc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "企业微信接口测试",
+			"item": [
+				{
+					"name": "获取企业微信AccessToken",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww03bca02e077c30dc&corpsecret=78_KMOT8FzfRFV-ESKJClmVoZc0LfTO59hTPBavLpNo",
+							"protocol": "https",
+							"host": [
+								"qyapi",
+								"weixin",
+								"qq",
+								"com"
+							],
+							"path": [
+								"cgi-bin",
+								"gettoken"
+							],
+							"query": [
+								{
+									"key": "corpid",
+									"value": "ww03bca02e077c30dc"
+								},
+								{
+									"key": "corpsecret",
+									"value": "78_KMOT8FzfRFV-ESKJClmVoZc0LfTO59hTPBavLpNo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取会话内容存档开启成员列表",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://qyapi.weixin.qq.com/cgi-bin/msgaudit/get_permit_user_list?access_token=1E51AURHvvuluRGbMR_iWVa_b-ixvLPmlEM_vTEoxaEhVGymEg1clI7dWpU5ZOb5TYfaba5OUbMGmm39aHMSNBYOgaDq9ub3v6y9Nzx3itdGfcv1oRC5CeEa1XCPjHwC-gl6DA4l0umkmQhlDFtV20aEzbu8RLEa2b-Ig0VT-69jXc09vH81JYoLiXv7dBKSx7c9qXJvRZGvY_gcR7uoNg",
+							"protocol": "https",
+							"host": [
+								"qyapi",
+								"weixin",
+								"qq",
+								"com"
+							],
+							"path": [
+								"cgi-bin",
+								"msgaudit",
+								"get_permit_user_list"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "1E51AURHvvuluRGbMR_iWVa_b-ixvLPmlEM_vTEoxaEhVGymEg1clI7dWpU5ZOb5TYfaba5OUbMGmm39aHMSNBYOgaDq9ub3v6y9Nzx3itdGfcv1oRC5CeEa1XCPjHwC-gl6DA4l0umkmQhlDFtV20aEzbu8RLEa2b-Ig0VT-69jXc09vH81JYoLiXv7dBKSx7c9qXJvRZGvY_gcR7uoNg"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "客情SOP",
+			"item": [
+				{
+					"name": "客情SOP-构造场景执行",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							},
+							{
+								"key": "Blade-Auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/blade-scrm/sop-new/d/testCreateScene",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-scrm",
+								"sop-new",
+								"d",
+								"testCreateScene"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "客情SOP-立即执行单条规则 Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							},
+							{
+								"key": "Blade-Auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/blade-scrm/sop-new/d/testCreateScene",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-scrm",
+								"sop-new",
+								"d",
+								"testCreateScene"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "客情SOP-立即执行单条规则",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+										"type": "text"
+									},
+									{
+										"key": "Blade-Auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/blade-scrm/sop-new/d/testRule?ruleId=1425724388463927298",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"blade-scrm",
+										"sop-new",
+										"d",
+										"testRule"
+									],
+									"query": [
+										{
+											"key": "ruleId",
+											"value": "1425724388463927298"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "客情SOP-立即执行定时任务",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							},
+							{
+								"key": "Blade-Auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/blade-scrm/sop-new/d/testRunSchedule",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-scrm",
+								"sop-new",
+								"d",
+								"testRunSchedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "客情SOP-新建场景",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							},
+							{
+								"key": "Blade-Auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"qwUserId\": null,\r\n        \"id\": \"1424991221109088258\",\r\n        \"name\": \"123\",\r\n        \"tagRule\": \"AND\",\r\n        \"tagList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"groupName\": \"资料包\",\r\n                \"tagName\": \"营销策划-社群\"\r\n            }\r\n        ],\r\n        \"memberList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"haoyuliu@okbihuo.com\"\r\n            },\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"juntaozuo@okbihuo.com\"\r\n            }\r\n        ],\r\n        \"ruleList\": [\r\n            {\r\n                \"id\": \"1424991222677757953\",\r\n                \"createUser\": \"1399546935326318593\",\r\n                \"createDept\": \"-1\",\r\n                \"createTime\": \"2021-08-10 15:09:17\",\r\n                \"updateUser\": \"1399546935326318593\",\r\n                \"updateTime\": \"2021-08-10 15:09:17\",\r\n                \"status\": 1,\r\n                \"isDeleted\": 0,\r\n                \"qwUserId\": \"3\",\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"delay\": 0,\r\n                \"scheduleTime\": \"04:00:00\",\r\n                \"sendMethod\": \"QW_API\",\r\n                \"content\": \"123\",\r\n                \"firstRule\": true,\r\n                \"lastRule\": true\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/blade-scrm/sop/new-customer/b/save",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-scrm",
+								"sop",
+								"new-customer",
+								"b",
+								"save"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "客情SOP-新建场景-正常",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+										"type": "text"
+									},
+									{
+										"key": "Blade-Auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"保存测试\",\r\n    \"tags\": \"\",\r\n    \"tagRule\": \"AND\",\r\n    \"memberList\": [\r\n        {\r\n            \"memberUserId\": \"chrise-chai\"\r\n        },\r\n        {\r\n            \"memberUserId\": \"xiang.yu\"\r\n        }\r\n    ],\r\n    \"ruleList\": [\r\n        {\r\n            \"delay\": 1,\r\n            \"sendMethod\": \"QW_API\",\r\n            \"content\": \"1天后4天发送\",\r\n            \"attachmentList\": [\r\n                {\r\n                    \"type\": \"IMAGE\",\r\n                    \"content\": \"http://file.bihuo8.com/scrm/upload/20210816/c7996bec80dd462e4a41fc1d455ef7e2.png\"\r\n                }\r\n            ],\r\n            \"scheduleTime\": \"04:00:00\"\r\n        },\r\n        {\r\n            \"delay\": 3,\r\n            \"sendMethod\": \"QW_API\",\r\n            \"content\": \"3天后11点半执行\",\r\n            \"attachmentList\": [\r\n                {\r\n                    \"type\": \"LINK\",\r\n                    \"content\": \"{\\\"title\\\":\\\"这是百度的链接\\\",\\\"desc\\\":\\\"这是百度链接的描述\\\",\\\"url\\\":\\\"http://www.baidu.com\\\",\\\"picurl\\\":\\\"http://file.bihuo8.com/scrm/upload/20210816/c7996bec80dd462e4a41fc1d455ef7e2.png\\\"}\"\r\n                }\r\n            ],\r\n            \"scheduleTime\": \"11:30:00\"\r\n        }\r\n    ],\r\n    \"id\": null,\r\n    \"tagList\": [\r\n        {\r\n            \"tagName\": \"sop\",\r\n            \"groupName\": \"必火scrm\"\r\n        },\r\n        {\r\n            \"tagName\": \"会话存档\",\r\n            \"groupName\": \"必火scrm\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/blade-scrm/sop/new-customer/b/save",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"blade-scrm",
+										"sop",
+										"new-customer",
+										"b",
+										"save"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "客情SOP-编辑场景",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+										"type": "text"
+									},
+									{
+										"key": "Blade-Auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"qwUserId\": null,\r\n        \"id\": \"1424991221109088258\",\r\n        \"name\": \"123\",\r\n        \"tagRule\": \"AND\",\r\n        \"tagList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"groupName\": \"资料包\",\r\n                \"tagName\": \"营销策划-社群\"\r\n            }\r\n        ],\r\n        \"memberList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"haoyuliu@okbihuo.com\"\r\n            },\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"juntaozuo@okbihuo.com\"\r\n            }\r\n        ],\r\n        \"ruleList\": [\r\n            {\r\n                \"id\": \"1424991222677757953\",\r\n                \"createUser\": \"1399546935326318593\",\r\n                \"createDept\": \"-1\",\r\n                \"createTime\": \"2021-08-10 15:09:17\",\r\n                \"updateUser\": \"1399546935326318593\",\r\n                \"updateTime\": \"2021-08-10 15:09:17\",\r\n                \"status\": 1,\r\n                \"isDeleted\": 0,\r\n                \"qwUserId\": \"3\",\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"delay\": 0,\r\n                \"scheduleTime\": \"04:00:00\",\r\n                \"sendMethod\": \"QW_API\",\r\n                \"content\": \"123\",\r\n                \"firstRule\": true,\r\n                \"lastRule\": true\r\n            }\r\n        ]\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/blade-scrm/sop/new-customer/b/save",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"blade-scrm",
+										"sop",
+										"new-customer",
+										"b",
+										"save"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "客情SOP-SOP运行数据分页列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							},
+							{
+								"key": "Blade-Auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/blade-scrm/sop/new-customer/b/pageRunData?current=1&size=10&sceneId=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-scrm",
+								"sop",
+								"new-customer",
+								"b",
+								"pageRunData"
+							],
+							"query": [
+								{
+									"key": "current",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "start",
+									"value": "",
+									"description": "起始时间",
+									"disabled": true
+								},
+								{
+									"key": "end",
+									"value": "2021-08-22T00:00:00",
+									"description": "结束时间",
+									"disabled": true
+								},
+								{
+									"key": "sceneId",
+									"value": "3",
+									"description": "场景id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "客情SOP-SOP运行数据分页列表",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Blade-Auth",
+										"value": "{{token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/blade-scrm/sop/new-customer/b/pageRunData?current=1&size=10&sceneId=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"blade-scrm",
+										"sop",
+										"new-customer",
+										"b",
+										"pageRunData"
+									],
+									"query": [
+										{
+											"key": "current",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "start",
+											"value": "",
+											"description": "起始时间",
+											"disabled": true
+										},
+										{
+											"key": "end",
+											"value": "2021-08-22T00:00:00",
+											"description": "结束时间",
+											"disabled": true
+										},
+										{
+											"key": "sceneId",
+											"value": "3",
+											"description": "场景id"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"success\": true,\n    \"data\": {\n        \"records\": [\n            {\n                \"scheduleDay\": \"2021-08-09\",\n                \"delay\": 3,\n                \"scheduledTime\": \"04:00:00\",\n                \"executedTime\": \"2021-08-12 04:00:00\",\n                \"resultCode\": null,\n                \"resultDesc\": null,\n                \"customerCount\": 120\n            },\n            {\n                \"scheduleDay\": \"2021-08-09\",\n                \"delay\": 5,\n                \"scheduledTime\": \"04:00:00\",\n                \"executedTime\": \"2021-08-14 04:00:00\",\n                \"resultCode\": null,\n                \"resultDesc\": null,\n                \"customerCount\": 110\n            },\n            {\n                \"scheduleDay\": \"2021-08-10\",\n                \"delay\": 3,\n                \"scheduledTime\": \"04:00:00\",\n                \"executedTime\": \"2021-08-12 04:00:00\",\n                \"resultCode\": null,\n                \"resultDesc\": null,\n                \"customerCount\": 10\n            },\n            {\n                \"scheduleDay\": \"2021-08-10\",\n                \"delay\": 3,\n                \"scheduledTime\": \"04:00:00\",\n                \"executedTime\": \"2021-08-12 04:00:00\",\n                \"resultCode\": null,\n                \"resultDesc\": null,\n                \"customerCount\": 10\n            }\n        ],\n        \"total\": 4,\n        \"size\": 10,\n        \"current\": 1,\n        \"orders\": [],\n        \"optimizeCountSql\": true,\n        \"hitCount\": false,\n        \"countId\": null,\n        \"maxLimit\": null,\n        \"searchCount\": true,\n        \"pages\": 1\n    },\n    \"msg\": \"操作成功\"\n}"
+						}
+					]
+				},
+				{
+					"name": "客情SOP-场景列表",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							},
+							{
+								"key": "Blade-Auth",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"qwUserId\": null,\r\n        \"id\": \"1424991221109088258\",\r\n        \"name\": \"123\",\r\n        \"tagRule\": \"AND\",\r\n        \"tagList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"groupName\": \"资料包\",\r\n                \"tagName\": \"营销策划-社群\"\r\n            }\r\n        ],\r\n        \"memberList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"haoyuliu@okbihuo.com\"\r\n            },\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"juntaozuo@okbihuo.com\"\r\n            }\r\n        ],\r\n        \"ruleList\": [\r\n            {\r\n                \"id\": \"1424991222677757953\",\r\n                \"createUser\": \"1399546935326318593\",\r\n                \"createDept\": \"-1\",\r\n                \"createTime\": \"2021-08-10 15:09:17\",\r\n                \"updateUser\": \"1399546935326318593\",\r\n                \"updateTime\": \"2021-08-10 15:09:17\",\r\n                \"status\": 1,\r\n                \"isDeleted\": 0,\r\n                \"qwUserId\": \"3\",\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"delay\": 0,\r\n                \"scheduleTime\": \"04:00:00\",\r\n                \"sendMethod\": \"QW_API\",\r\n                \"content\": \"123\",\r\n                \"firstRule\": true,\r\n                \"lastRule\": true\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/blade-scrm/sop/new-customer/b/pageScene?current=1&size=10&name=的&enabled=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-scrm",
+								"sop",
+								"new-customer",
+								"b",
+								"pageScene"
+							],
+							"query": [
+								{
+									"key": "current",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "的",
+									"description": "名称关键字"
+								},
+								{
+									"key": "enabled",
+									"value": "true",
+									"description": "激活状态"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "客情SOP-场景列表",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+										"type": "text"
+									},
+									{
+										"key": "Blade-Auth",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"qwUserId\": null,\r\n        \"id\": \"1424991221109088258\",\r\n        \"name\": \"123\",\r\n        \"tagRule\": \"AND\",\r\n        \"tagList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"groupName\": \"资料包\",\r\n                \"tagName\": \"营销策划-社群\"\r\n            }\r\n        ],\r\n        \"memberList\": [\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"haoyuliu@okbihuo.com\"\r\n            },\r\n            {\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"memberUserId\": \"juntaozuo@okbihuo.com\"\r\n            }\r\n        ],\r\n        \"ruleList\": [\r\n            {\r\n                \"id\": \"1424991222677757953\",\r\n                \"createUser\": \"1399546935326318593\",\r\n                \"createDept\": \"-1\",\r\n                \"createTime\": \"2021-08-10 15:09:17\",\r\n                \"updateUser\": \"1399546935326318593\",\r\n                \"updateTime\": \"2021-08-10 15:09:17\",\r\n                \"status\": 1,\r\n                \"isDeleted\": 0,\r\n                \"qwUserId\": \"3\",\r\n                \"sceneId\": \"1424991221109088258\",\r\n                \"delay\": 0,\r\n                \"scheduleTime\": \"04:00:00\",\r\n                \"sendMethod\": \"QW_API\",\r\n                \"content\": \"123\",\r\n                \"firstRule\": true,\r\n                \"lastRule\": true\r\n            }\r\n        ]\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/blade-scrm/sop/new-customer/b/pageScene?current=1&size=10&name=的&enabled=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"blade-scrm",
+										"sop",
+										"new-customer",
+										"b",
+										"pageScene"
+									],
+									"query": [
+										{
+											"key": "current",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "name",
+											"value": "的",
+											"description": "名称关键字"
+										},
+										{
+											"key": "enabled",
+											"value": "true",
+											"description": "激活状态"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "文件组件",
+			"item": [
+				{
+					"name": "上传文件",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Administrator/Desktop/未命名文件(40).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/file/upload?dir=测试目录",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"file",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "dir",
+									"value": "测试目录"
+								},
+								{
+									"key": "file",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取文件内容",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Administrator/Desktop/未命名文件(40).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/file/upload?dir=测试目录",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"file",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "dir",
+									"value": "测试目录"
+								},
+								{
+									"key": "file",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "裂变活动-海报测试背景图片能否加载",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}blade-scrm/open/test-check/testGenPoster?path=https://www.bihuo8.com/lb/api/file/preview/1415520349533032449",
+					"host": [
+						"{{url}}blade-scrm"
+					],
+					"path": [
+						"open",
+						"test-check",
+						"testGenPoster"
+					],
+					"query": [
+						{
+							"key": "path",
+							"value": "https://www.bihuo8.com/lb/api/file/preview/1415520349533032449"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "第三方接口-测试同步unionId客户企微数据",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"oIoCfs2PEXKG7AcKLjSqm10dbJlA\",\r\n\"oIoCfs2OX6_vbnvI3IY76MzPoyXs\",\r\n\"oIoCfs9VgGmvigM49tKZsLLBcALM\",\r\n\"oIoCfs1XRbEW-8HQnrswLWYEQ90w\",\r\n\"oIoCfs2c4peIlUlVahZeuQkD6VnM\",\r\n\"oIoCfs7usfCKlJ9dWnNxmQW6MU3E\",\r\n\"oIoCfs27DuDKL4nYLm_FS85f3-5c\",\r\n\"oIoCfs-jEaEC4WQZbKO0IVx8vqI4\",\r\n\"oIoCfswU18BvAP_kbKnYHZnHV4Dg\",\r\n\"oIoCfs3BE6_hPxwRSOawrWqriWj4\",\r\n\"oIoCfs6IkO0y6nQPppGxFrtIUlkk\",\r\n\"oIoCfszyfDilkukFHW39agQiQqFY\",\r\n\"oIoCfszBFaGSHb2fEBwEybI0rG-s\",\r\n\"oIoCfs4Y9YZv8eXmmUWK48_qHGYE\",\r\n\"oIoCfs7spI5mO-KB1f4KpQA7m1Mc\",\r\n\"oIoCfs2XEtaOAIGxJFW1wK8PdD74\",\r\n\"oIoCfs-Yj5M_6sEebybe-J5vs0b0\",\r\n\"oIoCfs65Y_9UP_wuyaTKr-BIOems\",\r\n\"oIoCfsxnm1Bag7Dtjf263lSc3f5w\",\r\n\"oIoCfsytp9splfNFq-7HrQ7dEDP4\",\r\n\"oIoCfs8hTH4tNKJMXF2RHEz_4bYI\",\r\n\"oIoCfs3bfvNXWbHHp_z1-PO3VPq0\",\r\n\"oIoCfszfaKWPyLhbvCPEHCMMySrg\",\r\n\"oIoCfs39RpmnjDMnvigzeNHeOeOQ\",\r\n\"oIoCfs-CYI8TFd-cJVc3vxg-gqVQ\",\r\n\"oIoCfs2pOvmuJoPqUDilcraBIYoM\",\r\n\"oIoCfsxmgTuWn_7JHJ14OJqLP0g8\",\r\n\"oIoCfs2mOvMRfgMfeTa0lpojCjs0\",\r\n\"oIoCfs9ntILZMiudAX1hLDy2LTG8\",\r\n\"oIoCfs8CJNDPWOfwVzydhpCdLJ58\",\r\n\"oIoCfs3Ihg8HV6djIUIrd170LGZY\",\r\n\"oIoCfs2cxgIbR3u4rcmMMZpXN5ZU\",\r\n\"oIoCfs4UQ1Dhk7uvvAFVGA5iWPGI\",\r\n\"oIoCfs6veGXf7iH8kGrUsXX-Kxew\",\r\n\"oIoCfs6Zxqdd9cVjg8_ETLSIiJx4\",\r\n\"oIoCfsxbL_p5SdvqK3VCJTAdzSyk\",\r\n\"oIoCfs7sXSh7e_hNW9loNyxfPVvE\",\r\n\"oIoCfs-y2hcIMFr44VAqotFfHqJk\",\r\n\"oIoCfsyc3ZF1uZT1_aBBp7P-jvuA\",\r\n\"oIoCfs5MtC3CClr7TPwqhCBHtrRk\",\r\n\"oIoCfs2yCNErsQUHMf0WMwWmGEAU\",\r\n\"oIoCfs_WbkMOpVfuptzJh9q1QQUk\",\r\n\"oIoCfs7OfvRXuLO-TOpxwj8D5C1A\",\r\n\"oIoCfszy3Ixk-n9-PL02UzfhbYwg\",\r\n\"oIoCfs_l518f99f9lYV-ARwA2tuY\",\r\n\"oIoCfsyHL3hQet3o1qVy9kRNvngQ\",\r\n\"oIoCfs0oYnVLJVl23GCjDR51i-aE\",\r\n\"oIoCfs_kE7XgVRctdtsDKq7K72tA\",\r\n\"oIoCfs8m-6Xu1ZqKstP7rMTxw48A\",\r\n\"oIoCfs1SHCK6O5afNfBdlma8wn8g\",\r\n\"oIoCfsxfws-apelu_A5Irs2iTG7g\",\r\n\"oIoCfs1QYKXDsoMEu0MX45HsV9Zg\",\r\n\"oIoCfs70Te_W5ez1jo-r-WNr_YS8\",\r\n\"oIoCfsxq9hmLMMcbLHh6Z0IamepU\",\r\n\"oIoCfs91trNQifQzq-1vdhtM8kEo\",\r\n\"oIoCfswCrCpKZDZT2k31-14bid5g\",\r\n\"oIoCfs9F3MgdnKQrKsp0EttmED9I\",\r\n\"oIoCfs_1EZeNuNHmhrKfqv-v5mzQ\",\r\n\"oIoCfsy5trJbcjATEdSRD1fOT1OQ\",\r\n\"oIoCfs8wF3X6dKGo53Iw-KXRMmtU\",\r\n\"oIoCfs-a4zMt4v4dZJBGsbL8RMUk\",\r\n\"oIoCfsxoCKsJ1FRTPL-olzSBti1A\",\r\n\"oIoCfsyBrjVopMTMU-vJFPbsZm14\",\r\n\"oIoCfs1UzF97ODyOVdRg3wxI1dOs\",\r\n\"oIoCfs6S2gRSMh1G3gpHIK9ag0lk\",\r\n\"oIoCfswYOOIQqxo3ZPykErVOfbRU\",\r\n\"oIoCfs1gPazt0zAsrbAQvTSk7Qno\",\r\n\"oIoCfs7TsjwlJJDM9iXNUZbIAHk4\",\r\n\"oIoCfs1L1pomPCAjV_1w9gm-SI94\",\r\n\"oIoCfsyRw9P76ClvGOCUTjIWPnEk\",\r\n\"oIoCfs5OOL93VTk1bwm8Sh8UQy3g\",\r\n\"oIoCfs9FAqKfCKMiFxUh2noxquSk\",\r\n\"oIoCfsz8Ucp8W50l7mPaGQ4DBEPY\",\r\n\"oIoCfs43IKLAISIptJxeb4NUbwdA\",\r\n\"oIoCfswAGzPr5rwlZ35AncBdxIOs\",\r\n\"oIoCfswfjl4B4r1C_gcZHfZe1GtQ\",\r\n\"oIoCfs90LQgUUCnaC-p18BvQzJqY\",\r\n\"oIoCfs5ArlGSXp_8Ppq8sZH8F8xI\",\r\n\"oIoCfs5kGnNWM3D4mbcN_3ePBr-U\",\r\n\"oIoCfs0Zv0I-824W4kFoc_sOTD10\",\r\n\"oIoCfs058oHJ1vYjcOi_3mqdi92U\",\r\n\"oIoCfs6Gr3zVC1FIpd9qiKi5LMx4\",\r\n\"oIoCfswoj_zGX0jHf5AGw-4iEI7w\",\r\n\"oIoCfs4mwirjG_6XQhUIQoODafFI\",\r\n\"oIoCfs1Tc0_I7meaqLrR2B_y0Qa8\",\r\n\"oIoCfs-gOScPsLNfJRQhAm_h7XgE\",\r\n\"oIoCfs9oEPJ_GF3sQnRMccD6JWS4\",\r\n\"oIoCfswvr05LmVeQzeYzlWdfuM58\",\r\n\"oIoCfs0mKzu1CLjkueplfT2wSzCk\",\r\n\"oIoCfs3gdSo-75OUEKmimYaNgSbU\",\r\n\"oIoCfs-oaniIDXIFHGdotYAWKvoo\",\r\n\"oIoCfs4oZZXrO2lROOUrgpXLQW9E\",\r\n\"oIoCfs_LN_ujsqUO72iKpCna1qXg\",\r\n\"oIoCfs1unBolq8m8gWxuW-pOvxJQ\",\r\n\"oIoCfs5_hwANfhacwA1dI08GeJBY\",\r\n\"oIoCfs-6MszWUJZDQ-pOXW3wuUFM\",\r\n\"oIoCfswqhTUjYgUfmNekp42Yr_yo\",\r\n\"oIoCfs36JKqkb-ufYSMdUwBOXpSA\",\r\n\"oIoCfs8xa1aIFygmyS4YFm1QM0ws\",\r\n\"oIoCfs_dh5AVTgGE1-yT2LJyinak\",\r\n\"oIoCfs7t9LGgtyrWhiNThNLWphJk\",\r\n\"oIoCfsyORvqqC6ar3sDI2rSKiWeQ\",\r\n\"oIoCfs-2foQfOi-17_gh0BMXpWx4\",\r\n\"oIoCfs-7uD8lD_8PXsX9w6rOZNcA\",\r\n\"oIoCfs8jP4eUlEGn0I_Of8Z9hQl8\",\r\n\"oIoCfs1GCAWbFp_F4r8rsY0qDu0g\",\r\n\"oIoCfs2_DORdq_N0Sg29P14sXkHc\",\r\n\"oIoCfswswKaKmiKsakxv-xdl3ito\",\r\n\"oIoCfs3viELBkOM1MxpwY9cQWtDw\",\r\n\"oIoCfs5Ikmys-nNP9vf4xTEcZrP8\",\r\n\"oIoCfswH2vT5afz1f5B4nyEkBbZ4\",\r\n\"oIoCfszqcMVLyiEBtWcxJpPPprxo\",\r\n\"oIoCfswcqh6HZ0EE6Xis4cLNNeaw\",\r\n\"oIoCfs9c1Bfz-bHpX6OoaBjtcGYQ\",\r\n\"oIoCfs3gL8PesGMPh9XqVaJ93yvE\",\r\n\"oIoCfs-KmNqpxf2i5Vg2if9v89aI\",\r\n\"oIoCfs8y8zL3BO_E0OJhR6lZZbS4\",\r\n\"oIoCfs4FlkWhZddv0GuLu0-izQiI\",\r\n\"oIoCfsyPSunZbleIegKGyldrE1oc\",\r\n\"oIoCfs_BOPeiN8f48D36WqEuxD4E\",\r\n\"oIoCfs7_f-mEAj2F8l7l9owBQ7uU\",\r\n\"oIoCfs6o26rX4lk8WGUVPGnTIkCs\",\r\n\"oIoCfswtX5uJMJ2L96Jd-cr7kU6U\",\r\n\"oIoCfs0ziNMpM8xdTkeLpggDFrxQ\",\r\n\"oIoCfszVFVC6QoQxyHS3F9fWUPbU\",\r\n\"oIoCfszmZ3ob6eRJOkAJg_wXFg-k\",\r\n\"oIoCfs0V-7JAd7pSqG4rG5s2w4jk\",\r\n\"oIoCfs5PLG6CCLHjxlXMN8FRWIJA\",\r\n\"oIoCfs1e0PcgSMcKyn7lQtc-8a7s\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}blade-scrm/open/third-event/listener/temp-sync",
+					"host": [
+						"{{url}}blade-scrm"
+					],
+					"path": [
+						"open",
+						"third-event",
+						"listener",
+						"temp-sync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登录接口",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"setToken\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    // 更新token信息\r",
+							"    var data = JSON.parse(responseBody);\r",
+							"    if (data.access_token) {\r",
+							"        postman.setEnvironmentVariable(\"token\", data.access_token);\r",
+							"    }\r",
+							"    if (data.scrm.qwUserId) {\r",
+							"        postman.setEnvironmentVariable(\"qwUserId\", data.scrm.qwUserId);\r",
+							"    }\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/blade-auth/oauth/token/scrm?tenantId=000000&username=13080511724&password=e10adc3949ba59abbe56e057f20f883e&grant_type=password&scope=all&type=account",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"blade-auth",
+						"oauth",
+						"token",
+						"scrm"
+					],
+					"query": [
+						{
+							"key": "tenantId",
+							"value": "000000"
+						},
+						{
+							"key": "username",
+							"value": "13080511724"
+						},
+						{
+							"key": "password",
+							"value": "e10adc3949ba59abbe56e057f20f883e"
+						},
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "scope",
+							"value": "all"
+						},
+						{
+							"key": "type",
+							"value": "account"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "登录接口",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic c2FiZXI6c2FiZXJfc2VjcmV0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/blade-auth/oauth/token/scrm?tenantId=000000&username=13080511724&password=e10adc3949ba59abbe56e057f20f883e&grant_type=password&scope=all&type=account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blade-auth",
+								"oauth",
+								"token",
+								"scrm"
+							],
+							"query": [
+								{
+									"key": "tenantId",
+									"value": "000000"
+								},
+								{
+									"key": "username",
+									"value": "13080511724"
+								},
+								{
+									"key": "password",
+									"value": "e10adc3949ba59abbe56e057f20f883e"
+								},
+								{
+									"key": "grant_type",
+									"value": "password"
+								},
+								{
+									"key": "scope",
+									"value": "all"
+								},
+								{
+									"key": "type",
+									"value": "account"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"tenant_id\": \"000000\",\n    \"user_id\": \"1399546935326318593\",\n    \"dept_id\": null,\n    \"post_id\": null,\n    \"role_id\": \"1393502872990826498\",\n    \"oauth_id\": null,\n    \"account\": \"13080511724\",\n    \"user_name\": \"13080511724\",\n    \"nick_name\": null,\n    \"role_name\": \"scrm_corp_admin\",\n    \"avatar\": \"\",\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0ZW5hbnRfaWQiOiIwMDAwMDAiLCJyb2xlX25hbWUiOiJzY3JtX2NvcnBfYWRtaW4iLCJ1c2VyX2lkIjoiMTM5OTU0NjkzNTMyNjMxODU5MyIsInJvbGVfaWQiOiIxMzkzNTAyODcyOTkwODI2NDk4IiwidXNlcl9uYW1lIjoiMTMwODA1MTE3MjQiLCJkZXRhaWwiOnsidHlwZSI6IndlYiJ9LCJ0b2tlbl90eXBlIjoiYWNjZXNzX3Rva2VuIiwiYWNjb3VudCI6IjEzMDgwNTExNzI0IiwiY2xpZW50X2lkIjoic2FiZXIiLCJleHAiOjE2MjkwOTc3NjUsIm5iZiI6MTYyOTA5NDE2NX0.WJqZk8j9gQHwnJiz4t8Sw4VAWkmHxOBDfimsRYFf_89A9JqXKyhryJ4YGL-6wmV8lh1udy39fWi2zzIxYjym0Q\",\n    \"refresh_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ1c2VyX2lkIjoiMTM5OTU0NjkzNTMyNjMxODU5MyIsInRva2VuX3R5cGUiOiJyZWZyZXNoX3Rva2VuIiwiY2xpZW50X2lkIjoic2FiZXIiLCJleHAiOjE2Mjk2OTg5NjUsIm5iZiI6MTYyOTA5NDE2NX0.slHjetsUVZvy3tWgt6Js9InN7WrA9yy-dxE_Q4tbdGOazmbdeapWy35kL_bZIkA-V-n34gAYY-Z__wsrBmMtQw\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600,\n    \"detail\": {\n        \"type\": \"web\"\n    },\n    \"license\": \"powered by bladex\",\n    \"scrm\": {\n        \"openId\": null,\n        \"nickname\": null,\n        \"username\": null,\n        \"avatar\": null,\n        \"createdDate\": null,\n        \"qwUserId\": \"3\",\n        \"gzhUserId\": \"1\",\n        \"corpId\": \"ww03bca02e077c30dc\",\n        \"corpName\": null,\n        \"agentId\": 1000068,\n        \"industryName\": null,\n        \"myProductList\": [\n            {\n                \"distanceTime\": -5976399337,\n                \"code\": \"WxWorkBasic\",\n                \"endTime\": 1623117766765,\n                \"systemTime\": 1629094166102,\n                \"enabled\": false,\n                \"module\": \"WxWork\"\n            },\n            {\n                \"distanceTime\": 0,\n                \"code\": \"WxWorkBasic_One_Month\",\n                \"endTime\": 0,\n                \"systemTime\": 1629094166102,\n                \"enabled\": false,\n                \"module\": null\n            },\n            {\n                \"distanceTime\": 71289600369,\n                \"code\": \"WxWorkVIP\",\n                \"endTime\": 1700383766471,\n                \"systemTime\": 1629094166102,\n                \"enabled\": true,\n                \"module\": \"WxWork\"\n            },\n            {\n                \"distanceTime\": -5976399447,\n                \"code\": \"WxMpBasic\",\n                \"endTime\": 1623117766655,\n                \"systemTime\": 1629094166102,\n                \"enabled\": false,\n                \"module\": \"WxMp\"\n            },\n            {\n                \"distanceTime\": 8218186022,\n                \"code\": \"WxMpVIP\",\n                \"endTime\": 1637312352124,\n                \"systemTime\": 1629094166102,\n                \"enabled\": true,\n                \"module\": \"WxMp\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
